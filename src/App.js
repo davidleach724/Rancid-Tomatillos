@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import movieData from './movieData'
-import Card from './Card'
 import Movies from './Movies'
 
 class App extends Component {
@@ -15,8 +14,7 @@ class App extends Component {
     return(
       <main>
         <h1>Header Goes Here</h1>
-        {console.log(this.state.movies.movieData)}
-        <Card />
+        <Movies movies={this.state.movies}/>
       </main>
     )
   }
