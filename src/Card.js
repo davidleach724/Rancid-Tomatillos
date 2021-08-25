@@ -3,7 +3,7 @@ import './Card.css'
 
 const Card = ({moviePoster, movieRating, movieTitle, movieID}) => {
   return (
-    <div>
+    <div className="card-container">
       <div className="top-card">
         <img src={moviePoster} height="60px"></img>
       </div>

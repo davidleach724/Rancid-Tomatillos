@@ -1,0 +1,22 @@
+
+
+.card-container {
+  box-sizing: border-box;
+  border: 3px solid black;
+  padding: 10px;
+}
+
+.top-card {
+  border: 2px solid rgb(255, 77, 106);
+  height: 70%;
+}
+
+.bottom-card {
+  height: 30%;
+  border: 2px solid rgb(3, 94, 3);
+}
+
+h2 {
+  font-size: ;
+}
+
