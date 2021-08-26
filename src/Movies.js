@@ -8,7 +8,7 @@ const Movies = (movies) => {
     return (
       <Card
         moviePoster={movie.poster_path}
-        movieRating={movie.average_rating}
+        movieRating={parseFloat(movie.average_rating).toFixed(2)}
         movieTitle={movie.title}
         movieID={movie.id}
         key={movie.id}
@@ -16,12 +16,13 @@ const Movies = (movies) => {
     )
   })
 
+ 
+
   return (
     <div className='movies-container'>
       {movieCards}
     </div>
   )
-
 }
 
 export default Movies
