@@ -3,8 +3,10 @@ import './SingleMovie.css'
 
 const SingleMovie = ({ singleMovie, clearMovie }) => {
   return (
-    <div>
-      <h1>Single Movie Right Here Yes Sir</h1>
+    <div className="single-movie-container" 
+    style={{ backgroundImage: `url(${singleMovie.backdrop_path})` }}>
+      <h2>{singleMovie.title}</h2>
+      <p></p>
       <button onClick={() => clearMovie()}>GO BACK</button>
     </div>
   )

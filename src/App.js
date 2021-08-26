@@ -26,7 +26,7 @@ class App extends Component {
       <main>
         <h1>🍅 🤢 Rancid Tomatillos</h1>
         {(this.state.singleMovie != '') && 
-          <SingleMovie singleMovie={this.singleMovie} clearMovie={this.clearMovie}/>}
+          <SingleMovie singleMovie={this.state.singleMovie} clearMovie={this.clearMovie}/>}
         {(this.state.singleMovie === '') && 
           <Movies movies={this.state.movies} chooseMovie={this.chooseMovie}/>}
         
