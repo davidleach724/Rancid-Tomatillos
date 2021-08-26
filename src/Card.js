@@ -5,11 +5,11 @@ const Card = ({moviePoster, movieRating, movieTitle, movieID}) => {
   return (
     <div className="card-container">
       <div className="top-card">
-        <img src={moviePoster} height="60px"></img>
+        <img src={moviePoster} className="movie-poster"></img>
       </div>
       <div className="bottom-card">
-        <h2>{movieTitle}</h2>
-        <h3>{movieRating}</h3>
+        <h2 className="poster-text">{movieTitle}</h2>
+        <h3 className="poster-text">Rating: {movieRating}</h3>
       </div>
     </div>
   )
