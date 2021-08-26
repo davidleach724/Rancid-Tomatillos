@@ -2,9 +2,8 @@ import React from 'react'
 import Card from './Card'
 import './Movies.css'
 
-const Movies = (movies) => {
-  console.log('console log', movies.movies.movieData.movies)
-  const movieCards = movies.movies.movieData.movies.map(movie => {
+const Movies = ({ movies, chooseMovie }) => {
+  const movieCards = movies.movieData.movies.map(movie => {
     return (
       <Card
         moviePoster={movie.poster_path}
@@ -12,6 +11,7 @@ const Movies = (movies) => {
         movieTitle={movie.title}
         movieID={movie.id}
         key={movie.id}
+        chooseMovie={chooseMovie}
       />
     )
   })

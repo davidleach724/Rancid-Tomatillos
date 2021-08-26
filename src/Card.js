@@ -1,9 +1,9 @@
 import react from 'react'
 import './Card.css'
 
-const Card = ({moviePoster, movieRating, movieTitle, movieID}) => {
+const Card = ({moviePoster, movieRating, movieTitle, movieID, chooseMovie}) => {
   return (
-    <div className="card-container">
+    <div className="card-container" onClick={() => chooseMovie(movieID)}>
       <div className="top-card">
         <img src={moviePoster} className="movie-poster"></img>
       </div>
