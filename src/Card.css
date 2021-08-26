@@ -1,0 +1,39 @@
+
+
+.card-container {
+  box-sizing: border-box;
+  border: 3px solid black;
+  padding: 10px;
+  max-width: 300px;
+  min-width: 300px;
+  min-height: 500px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-card {
+  /* border: 2px solid rgb(255, 77, 106); */
+  height: 70%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.movie-poster {
+  height: 25em;
+  width: auto;
+}
+
+.bottom-card {
+  /* border: 2px solid rgb(3, 94, 3); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poster-text {
+  padding: 0;
+  margin: 0;
+}
