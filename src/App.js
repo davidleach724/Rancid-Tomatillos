@@ -14,16 +14,20 @@ class App extends Component {
 
   chooseMovie = (id) => {
     const chosenMovie = this.state.movies.movieData.movies.find(movie => movie.id === id)
-    this.state.singleMovie = chosenMovie
-    console.log(this.state.singleMovie)
+    this.setState({ singleMovie: chosenMovie })
+  }
+
+  clearMovie = () => {
+    this.setState({ singleMovie: '' })
   }
 
   render() {
     return(
       <main>
         <h1>🍅 🤢 Rancid Tomatillos</h1>
-        {(this.state.singleMovie) && <h1>Heeey</h1>}
-        {(!this.state.singleMovie) && 
+        {(this.state.singleMovie != '') && 
+          <SingleMovie singleMovie={this.singleMovie} clearMovie={this.clearMovie}/>}
+        {(this.state.singleMovie === '') && 
           <Movies movies={this.state.movies} chooseMovie={this.chooseMovie}/>}
         
       </main>

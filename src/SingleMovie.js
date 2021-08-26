@@ -1,9 +1,12 @@
 import react from 'react'
 import './SingleMovie.css'
 
-const SingleMovie = () => {
+const SingleMovie = ({ singleMovie, clearMovie }) => {
   return (
-    <h1>Single Movie Right Here Yes Sir</h1>
+    <div>
+      <h1>Single Movie Right Here Yes Sir</h1>
+      <button onClick={() => clearMovie()}>GO BACK</button>
+    </div>
   )
 }
 
