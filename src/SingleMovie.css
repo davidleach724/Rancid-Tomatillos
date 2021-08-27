@@ -19,22 +19,26 @@
   width: 100vw;
 }
 
+h2 {
+  margin: 0;
+}
+
 .left-side {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 40vw;
   max-height: 60vh;
 }
 
 .movie-info-poster {
   width: 15em;
-  /* max-width: 20vw; */
+  height: auto;
 }
 
 p {
-  margin: 5px;
+  margin: 10px;
 }
 
 .movie-overview {
