@@ -12,7 +12,7 @@ const SingleMovie = ({ singleMovie, clearMovie }) => {
           <button onClick={() => clearMovie()}>GO BACK</button>
         </div>
         <div className="right-side">
-          <h4>"Some overview that is full of buzzwords to attempt to entice you to watch this movie! Explosions! Drama! True love! Robots! A cute dog!"</h4>
+          <h4 className="movie-overview">"Some overview that is full of buzzwords to attempt to entice you to watch this movie! Explosions! Drama! True love! Robots! A cute dog!"</h4>
           <h5>"It's a movie!"</h5>
           <p>Release Date: </p>
           <p>Run Time: </p>
