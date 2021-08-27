@@ -13,14 +13,6 @@
   justify-content: space-between;
 }
 
-.top-card {
-  /* border: 2px solid rgb(255, 77, 106); */
-  height: 70%;
-  display: flex;
-  justify-content: center;
-
-}
-
 .movie-poster {
   height: 25em;
   width: auto;
