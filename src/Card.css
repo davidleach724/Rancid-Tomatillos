@@ -10,7 +10,8 @@
   max-height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+
 }
 
 .movie-poster {
@@ -28,4 +29,5 @@
 .poster-text {
   padding: 0;
   margin: 0;
+  text-align: center;
 }
