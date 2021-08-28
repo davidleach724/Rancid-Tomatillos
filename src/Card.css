@@ -1,6 +1,6 @@
 .card-container {
   box-sizing: border-box;
-  border: 3px solid black;
+  /* border: 3px solid black; */
   padding: 12px;
   max-width: 300px;
   min-width: 300px;
@@ -12,7 +12,7 @@
 }
 
 .card-container:hover {
-  transform: scale(2);
+  transform: scale(1.1);
 }
 
 .movie-poster {

@@ -1,4 +1,3 @@
-import react from 'react'
 import './SingleMovie.css'
 
 const SingleMovie = ({ singleMovie, clearMovie }) => {
@@ -12,14 +11,14 @@ const SingleMovie = ({ singleMovie, clearMovie }) => {
           <button onClick={() => clearMovie()}>GO BACK</button>
         </div>
         <div className="right-side">
-          <h4 className="movie-overview">"Some overview that is full of buzzwords to attempt to entice you to watch this movie! Explosions! Drama! True love! Robots! A cute dog!"</h4>
-          <h5>"It's a movie!"</h5>
-          <p>Release Date: </p>
-          <p>Run Time: </p>
-          <p>Genres: </p>
-          <p>Avg. Rating: </p>
-          <p>Budget: </p>
-          <p>Revenue: </p>
+          <h4 className="movie-overview">{singleMovie.overview}</h4>
+          <h5>{singleMovie.tagline}</h5>
+          <p>Release Date: {singleMovie.release_date}</p>
+          <p>Run Time: {singleMovie.runtime} minutes</p>
+          <p>Genres: {singleMovie.genres}</p>
+          <p>Avg. Rating: {parseFloat(singleMovie.average_rating).toFixed(2)}</p>
+          <p>Budget: {singleMovie.budget}</p>
+          <p>Revenue: {singleMovie.revenue}</p>
         </div>
       </div>
     </div>
