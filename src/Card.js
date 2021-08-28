@@ -1,4 +1,3 @@
-import react from 'react'
 import './Card.css'
 
 const Card = ({moviePoster, movieRating, movieTitle, movieID, chooseMovie}) => {

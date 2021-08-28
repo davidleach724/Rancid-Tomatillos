@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
-import movieData from './movieData'
+// import movieData from './movieData'
 import Movies from './Movies'
 import SingleMovie from './SingleMovie'
+import { fetchData } from './APIcalls'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      movies: { movieData },
+      movies: '',
       singleMovie: ''
     }
+  }
+
+  componentDidMount() {
+    fetchData('movies')
+    .then(movies => this.setState({ movies }))
   }
 
   chooseMovie = (id) => {
@@ -25,10 +31,11 @@ class App extends Component {
     return(
       <main>
         <h1>🍅 🤢 Rancid Tomatillos</h1>
-        {(this.state.singleMovie != '') && 
+        {(this.state.movies) && <Movies movies={this.state.movies} />}
+        {/* {(this.state.singleMovie !== '') && 
           <SingleMovie singleMovie={this.state.singleMovie} clearMovie={this.clearMovie}/>}
         {(this.state.singleMovie === '') && 
-          <Movies movies={this.state.movies} chooseMovie={this.chooseMovie}/>}
+          <Movies movies={this.state.movies} chooseMovie={this.chooseMovie}/>} */}
         
       </main>
     )

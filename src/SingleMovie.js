@@ -1,4 +1,3 @@
-import react from 'react'
 import './SingleMovie.css'
 
 const SingleMovie = ({ singleMovie, clearMovie }) => {

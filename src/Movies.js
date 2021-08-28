@@ -3,7 +3,7 @@ import Card from './Card'
 import './Movies.css'
 
 const Movies = ({ movies, chooseMovie }) => {
-  const movieCards = movies.movieData.movies.map(movie => {
+  const movieCards = movies.movies.map(movie => {
     return (
       <Card
         moviePoster={movie.poster_path}
