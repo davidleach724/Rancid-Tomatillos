@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import movieData from './movieData'
 import Movies from './Movies'
 import SingleMovie from './SingleMovie'
 import { fetchData } from './APIcalls'
