@@ -16,11 +16,13 @@ class App extends Component {
   componentDidMount() {
     fetchData('movies')
     .then(movies => this.setState({ movies }))
+    .catch(error => this.setState({ error: error}))
   }
 
   chooseMovie = (id) => {
     fetchData(`movies/${id}`)
     .then(singleMovie => this.setState({ singleMovie }))
+    .catch(error => this.setState({ error: error}))
   }
 
   clearMovie = () => {
@@ -31,6 +33,7 @@ class App extends Component {
     return(
       <main>
         <h1>🍅 🤢 Rancid Tomatillos</h1>
+        {(this.state.error) && <h2>Sorry...Server Error 🤷‍♂️</h2>}
         {(this.state.singleMovie !== '') && 
           <SingleMovie singleMovie={this.state.singleMovie.movie} clearMovie={this.clearMovie}/>}
         {(this.state.singleMovie === '') && (this.state.movies) &&
