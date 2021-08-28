@@ -19,8 +19,8 @@ class App extends Component {
   }
 
   chooseMovie = (id) => {
-    const chosenMovie = this.state.movies.movieData.movies.find(movie => movie.id === id)
-    this.setState({ singleMovie: chosenMovie })
+    fetchData(`movies/${id}`)
+    .then(singleMovie => this.setState({ singleMovie }))
   }
 
   clearMovie = () => {
@@ -31,12 +31,10 @@ class App extends Component {
     return(
       <main>
         <h1>🍅 🤢 Rancid Tomatillos</h1>
-        {(this.state.movies) && <Movies movies={this.state.movies} />}
-        {/* {(this.state.singleMovie !== '') && 
-          <SingleMovie singleMovie={this.state.singleMovie} clearMovie={this.clearMovie}/>}
-        {(this.state.singleMovie === '') && 
-          <Movies movies={this.state.movies} chooseMovie={this.chooseMovie}/>} */}
-        
+        {(this.state.singleMovie !== '') && 
+          <SingleMovie singleMovie={this.state.singleMovie.movie} clearMovie={this.clearMovie}/>}
+        {(this.state.singleMovie === '') && (this.state.movies) &&
+          <Movies movies={this.state.movies} chooseMovie={this.chooseMovie}/>}
       </main>
     )
   }
