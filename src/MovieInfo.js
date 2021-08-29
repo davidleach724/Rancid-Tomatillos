@@ -2,6 +2,7 @@ var dayjs = require('dayjs')
 
 class MovieInfo {
   constructor (movie) {
+    console.log(movie)
     this.movie = movie
     this.background = movie.backdrop_path
     this.title = movie.title
@@ -14,6 +15,7 @@ class MovieInfo {
     this.rating = `Average Rating: ${parseFloat(movie.average_rating).toFixed(2)}`
     this.budget = `Budget: ${this.formatCost(movie.budget)}`
     this.revenue = `Revenue: ${this.formatCost(movie.revenue)}`
+    this.checkCosts()
   }
 
   formatReleaseDate(releaseDate) {
@@ -26,16 +28,20 @@ class MovieInfo {
   }
 
   formatCost(cost) {
-    if(cost === 0) {
-      this.budget = ''
-      this.revenue = 'HEY THERE'
-      return
-    }
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
       maximumFractionDigits: 0
     }).format(cost)
+  }
+
+  checkCosts() {
+    if (this.movie.budget === 0) {
+      this.budget = ''
+    }
+    if (this.movie.revenue === 0) {
+      this.revenue = ''
+    }
   }
 
 }
