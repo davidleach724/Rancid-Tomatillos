@@ -1,6 +1,9 @@
+import MovieInfo from './MovieInfo'
 import './SingleMovie.css'
 
 const SingleMovie = ({ singleMovie, clearMovie }) => {
+  const movie = new MovieInfo(singleMovie)
+
   return (
     <div className="single-movie-container" 
     style={{ backgroundImage: `url(${singleMovie.backdrop_path}), url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-black-solid-color-background.jpg)` }}>
