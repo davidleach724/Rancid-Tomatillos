@@ -3,25 +3,27 @@ import './SingleMovie.css'
 
 const SingleMovie = ({ singleMovie, clearMovie }) => {
   const movie = new MovieInfo(singleMovie)
+  console.log('movieInfo', movie)
+  console.log(singleMovie)
 
   return (
     <div className="single-movie-container" 
-    style={{ backgroundImage: `url(${singleMovie.backdrop_path}), url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-black-solid-color-background.jpg)` }}>
+    style={{ backgroundImage: `url(${movie.background}), url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-black-solid-color-background.jpg)` }}>
       <div className="movie-information">
         <div className="left-side">
-          <h2>{singleMovie.title}</h2>
-          <img className= "movie-info-poster" src={singleMovie.poster_path}></img>
+          <h2>{movie.title}</h2>
+          <img className= "movie-info-poster" src={movie.poster}></img>
           <button onClick={() => clearMovie()}>GO BACK</button>
         </div>
         <div className="right-side">
-          <h4 className="movie-overview">{singleMovie.overview}</h4>
+          <h4 className="movie-overview">{movie.overview}</h4>
           <h5>{singleMovie.tagline}</h5>
-          <p>Release Date: {singleMovie.release_date}</p>
-          <p>Run Time: {singleMovie.runtime} minutes</p>
-          <p>Genres: {singleMovie.genres}</p>
-          <p>Avg. Rating: {parseFloat(singleMovie.average_rating).toFixed(2)}</p>
-          <p>Budget: {singleMovie.budget}</p>
-          <p>Revenue: {singleMovie.revenue}</p>
+          <p>{movie.releaseDate}</p>
+          <p>{movie.runtime}</p>
+          <p>{movie.genres}</p>
+          <p>{movie.rating}</p>
+          <p>{movie.budget}</p>
+          <p>{movie.revenue}</p>
         </div>
       </div>
     </div>
