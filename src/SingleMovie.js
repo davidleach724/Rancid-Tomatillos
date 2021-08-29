@@ -3,8 +3,6 @@ import './SingleMovie.css'
 
 const SingleMovie = ({ singleMovie, clearMovie }) => {
   const movie = new MovieInfo(singleMovie)
-  console.log('movieInfo', movie)
-  console.log(singleMovie)
 
   return (
     <div className="single-movie-container" 
@@ -12,7 +10,7 @@ const SingleMovie = ({ singleMovie, clearMovie }) => {
       <div className="movie-information">
         <div className="left-side">
           <h2>{movie.title}</h2>
-          <img className= "movie-info-poster" src={movie.poster}></img>
+          <img className= "movie-info-poster" src={movie.poster} alt="movie poster"></img>
           <button onClick={() => clearMovie()}>GO BACK</button>
         </div>
         <div className="right-side">

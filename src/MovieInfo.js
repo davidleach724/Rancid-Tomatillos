@@ -26,6 +26,11 @@ class MovieInfo {
   }
 
   formatCost(cost) {
+    if(cost === 0) {
+      this.budget = ''
+      this.revenue = 'HEY THERE'
+      return
+    }
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
