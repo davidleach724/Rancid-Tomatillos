@@ -2,7 +2,6 @@ var dayjs = require('dayjs')
 
 class MovieInfo {
   constructor (movie) {
-    console.log(movie)
     this.movie = movie
     this.background = movie.backdrop_path
     this.title = movie.title
