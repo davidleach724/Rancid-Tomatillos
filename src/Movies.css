@@ -3,4 +3,5 @@
   display: flex;
   grid-gap: 20px;
   flex-wrap: wrap;
+  background-color: black;
 }

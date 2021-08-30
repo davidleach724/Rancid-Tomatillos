@@ -18,10 +18,11 @@ code {
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 80px;
   display: flex;
   justify-content: center;
   margin: 0;
   background-color: black;
+  color: white;
   font-family: 'Bungee Shade', cursive;
 }
