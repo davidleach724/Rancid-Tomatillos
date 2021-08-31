@@ -31,7 +31,7 @@ class App extends Component {
   render() {
     return(
       <main>
-        <h1>🍅 🤢 Rancid Tomatillos</h1>
+        <h1>🍅 🤢 Rancid Tomatillos 🎥</h1>
         {(this.state.error) && <h2>Sorry...Server Error 🤷‍♂️</h2>}
         {(this.state.singleMovie !== '') &&
           <SingleMovie singleMovie={this.state.singleMovie.movie} clearMovie={this.clearMovie}/>}
