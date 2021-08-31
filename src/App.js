@@ -7,8 +7,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      movies: '',
-      singleMovie: ''
+      movies: null,
+      singleMovie: null
     }
   }
 
@@ -25,7 +25,7 @@ class App extends Component {
   }
 
   clearMovie = () => {
-    this.setState({ singleMovie: '' })
+    this.setState({ singleMovie: null })
   }
 
   render() {
@@ -33,9 +33,9 @@ class App extends Component {
       <main>
         <h1>🍅 🤢 Rancid Tomatillos 🎥</h1>
         {(this.state.error) && <h2>Sorry...Server Error 🤷‍♂️</h2>}
-        {(this.state.singleMovie !== '') &&
+        {(this.state.singleMovie !== null) &&
           <SingleMovie singleMovie={this.state.singleMovie.movie} clearMovie={this.clearMovie}/>}
-        {(this.state.singleMovie === '') && (this.state.movies) &&
+        {(this.state.singleMovie === null) && (this.state.movies) &&
           <Movies movies={this.state.movies} chooseMovie={this.chooseMovie}/>}
         <div className="footer">
           <h4>Turing School of Software Design - Module 3 Paired Project. All rights not reserved 2021</h4>
