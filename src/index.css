@@ -21,3 +21,11 @@ h1 {
   color: white;
   font-family: 'Bungee Shade', cursive;
 }
+
+.footer {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  height: 10px;
+  font-family: 'Bungee Shade', cursive;
+}

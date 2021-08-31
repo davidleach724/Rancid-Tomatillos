@@ -37,6 +37,9 @@ class App extends Component {
           <SingleMovie singleMovie={this.state.singleMovie.movie} clearMovie={this.clearMovie}/>}
         {(this.state.singleMovie === '') && (this.state.movies) &&
           <Movies movies={this.state.movies} chooseMovie={this.chooseMovie}/>}
+        <div className="footer">
+          <h4>Turing School of Software Design - Module 3 Paired Project. All rights not reserved 2021</h4>
+        </div>
       </main>
     )
   }
