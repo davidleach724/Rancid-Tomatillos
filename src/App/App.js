@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Movies from './Movies'
-import SingleMovie from './SingleMovie'
-import { fetchData } from './APIcalls'
+import Movies from '../Movies/Movies'
+import SingleMovie from '../SingleMovie/SingleMovie'
+import { fetchData } from '../APIcalls'
 
 class App extends Component {
   constructor() {

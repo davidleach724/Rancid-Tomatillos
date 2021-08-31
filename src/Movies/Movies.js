@@ -1,6 +1,6 @@
 import React from 'react'
-import Card from './Card'
-import './Movies.css'
+import Card from '../Card/Card'
+import '../Movies/Movies.css'
 
 const Movies = ({ movies, chooseMovie }) => {
   const movieCards = movies.movies.map(movie => {
@@ -16,7 +16,7 @@ const Movies = ({ movies, chooseMovie }) => {
     )
   })
 
- 
+
 
   return (
     <div className='movies-container'>
