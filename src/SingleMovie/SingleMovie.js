@@ -5,7 +5,7 @@ const SingleMovie = ({ singleMovie, clearMovie }) => {
   const movie = new MovieInfo(singleMovie)
 
   return (
-    <div className="single-movie-container" 
+    <div className="single-movie-container"
     style={{ backgroundImage: `url(${movie.background}), url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-black-solid-color-background.jpg)` }}>
       <div className="movie-information">
         <div className="left-side">
