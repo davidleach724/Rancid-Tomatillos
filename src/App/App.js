@@ -34,14 +34,26 @@ class App extends Component {
     return(
       <main>
         <h1>🍅 🤢 Rancid Tomatillos 🎥</h1>
+
+        {(this.state.error) && <h2>Sorry...Server Error 🤷‍♂️</h2>}
         
-        {(this.state.singleMovie === null) && (this.state.movies) &&
+        {(this.state.movies) &&
           <Route exact path="/" render={() => <Movies movies={this.state.movies} chooseMovie={this.chooseMovie}/>} />}
 
+        <Route exact path="/:id" render={({match}) => {
+          const movieToRender = this.chooseMovie(match.params.id)
+          return console.log(this.state.singleMovie)
+          } } />
+
+
+
+        {/* <Route exact path ="/:id" render={() => <SingleMovie singleMovie={this.state.singleMovie.movie} clearMovie={this.clearMovie} />} /> */}
 
         {/* {(this.state.error) && <h2>Sorry...Server Error 🤷‍♂️</h2>}
+
         {(this.state.singleMovie !== null) &&
           <SingleMovie singleMovie={this.state.singleMovie.movie} clearMovie={this.clearMovie}/>}
+
         {(this.state.singleMovie === null) && (this.state.movies) &&
           <Movies movies={this.state.movies} chooseMovie={this.chooseMovie}/>} */}
         <div className="footer">
