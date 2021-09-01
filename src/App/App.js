@@ -15,13 +15,17 @@ class App extends Component {
   }
 
   componentDidMount() {
+    const url = window.location.href.split('/')
+    if (url[3]) {
+      this.chooseMovie(url[3])
+    }
     fetchData('movies')
     .then(movies => this.setState({ movies }))
     .catch(error => this.setState({ error: error}))
   }
 
   chooseMovie = (id) => {
-    fetchData(`movies/${id}`)
+    return fetchData(`movies/${id}`)
     .then(singleMovie => this.setState({ singleMovie }))
     .catch(error => this.setState({ error: error}))
   }
@@ -35,27 +39,17 @@ class App extends Component {
       <main>
         <h1>🍅 🤢 Rancid Tomatillos 🎥</h1>
 
-        {(this.state.error) && <h2>Sorry...Server Error 🤷‍♂️</h2>}
+        {this.state.error && <h2>Sorry...Server Error 🤷‍♂️</h2>}
         
-        {(this.state.movies) &&
+        {this.state.movies &&
           <Route exact path="/" render={() => <Movies movies={this.state.movies} chooseMovie={this.chooseMovie}/>} />}
 
-        <Route exact path="/:id" render={({match}) => {
-          const movieToRender = this.chooseMovie(match.params.id)
-          return console.log(this.state.singleMovie)
-          } } />
+        {this.state.singleMovie &&
+        <Route exact path="/:id" render={() => {
+          return <SingleMovie singleMovie={this.state.singleMovie.movie}/>} } />
+        }
+          
 
-
-
-        {/* <Route exact path ="/:id" render={() => <SingleMovie singleMovie={this.state.singleMovie.movie} clearMovie={this.clearMovie} />} /> */}
-
-        {/* {(this.state.error) && <h2>Sorry...Server Error 🤷‍♂️</h2>}
-
-        {(this.state.singleMovie !== null) &&
-          <SingleMovie singleMovie={this.state.singleMovie.movie} clearMovie={this.clearMovie}/>}
-
-        {(this.state.singleMovie === null) && (this.state.movies) &&
-          <Movies movies={this.state.movies} chooseMovie={this.chooseMovie}/>} */}
         <div className="footer">
           <h4>Turing School of Software Design - Module 3 Paired Project. All rights not reserved 2021</h4>
         </div>
