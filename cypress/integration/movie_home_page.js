@@ -18,7 +18,7 @@ describe('User movie flows', () => {
     })
 
     it('Should be able to click on movie card and page updates URL and display details', () => {
-      cy.url().then(url => {
+        cy.url().then(url => {
           cy.get('.movieCards').click()
           cy.url().should('eq', 'http://localhost:3000/694919')
           cy.url().should('not.eq', url);
