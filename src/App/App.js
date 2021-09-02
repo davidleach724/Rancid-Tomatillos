@@ -9,29 +9,14 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      movies: null,
-      singleMovie: null
+      movies: null
     }
   }
 
   componentDidMount() {
-    const url = window.location.href.split('/')
-    if (url[3]) {
-      this.chooseMovie(url[3])
-    }
-    fetchData('movies')
+     fetchData(`movies`)
     .then(movies => this.setState({ movies }))
     .catch(error => this.setState({ error: error}))
-  }
-
-  chooseMovie = (id) => {
-    return fetchData(`movies/${id}`)
-    .then(singleMovie => this.setState({ singleMovie }))
-    .catch(error => this.setState({ error: error}))
-  }
-
-  clearMovie = () => {
-    this.setState({ singleMovie: null })
   }
 
   render() {
@@ -42,12 +27,12 @@ class App extends Component {
         {this.state.error && <h2>Sorry...Server Error 🤷‍♂️</h2>}
         
         {this.state.movies &&
-          <Route exact path="/" render={() => <Movies movies={this.state.movies} chooseMovie={this.chooseMovie}/>} />}
+          <Route exact path="/" render={() => 
+            <Movies movies={this.state.movies}/>} 
+          />}
 
-        {this.state.singleMovie &&
-        <Route exact path="/:id" render={() => {
-          return <SingleMovie singleMovie={this.state.singleMovie.movie}/>} } />
-        }
+          <Route exact path="/:id" render={({ match }) => {
+            return <SingleMovie movieID={parseInt(match.params.id)}/>} } />
           
 
         <div className="footer">

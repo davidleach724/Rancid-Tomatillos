@@ -3,7 +3,7 @@ import Card from '../Card/Card'
 import '../Movies/Movies.css'
 import { Link } from 'react-router-dom'
 
-const Movies = ({ movies, chooseMovie }) => {
+const Movies = ({ movies }) => {
   const movieCards = movies.movies.map(movie => {
     return (
       <Link to={`/${movie.id}`}>
@@ -13,7 +13,6 @@ const Movies = ({ movies, chooseMovie }) => {
           movieTitle={movie.title}
           movieID={movie.id}
           key={movie.id}
-          chooseMovie={chooseMovie}
           />
       </Link>
     )

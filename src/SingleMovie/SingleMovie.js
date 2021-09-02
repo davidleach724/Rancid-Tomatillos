@@ -1,32 +1,51 @@
+import React, { Component } from 'react'
 import MovieInfo from './MovieInfo'
+import { fetchData } from '../APIcalls'
 import { Link } from 'react-router-dom'
 import './SingleMovie.css'
 
-const SingleMovie = ({ singleMovie, clearMovie }) => {
-  const movie = new MovieInfo(singleMovie)
+class SingleMovie extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      singleMovie: null
+    }
+  }
 
-  return (
-    <div className="single-movie-container"
-    style={{ backgroundImage: `url(${movie.background}), url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-black-solid-color-background.jpg)` }}>
-      <div className="movie-information">
-        <div className="left-side">
-          <h2>{movie.title}</h2>
-          <img className= "movie-info-poster" src={movie.poster} alt="movie poster"></img>
-          <Link to={'/'} className='back-btn'>GO BACK</Link>
-        </div>
-        <div className="right-side">
-          <h4 className="movie-overview">{movie.overview}</h4>
-          <h5>{singleMovie.tagline}</h5>
-          <p>{movie.releaseDate}</p>
-          <p>{movie.genres}</p>
-          <p>{movie.runTime}</p>
-          <p>{movie.rating}</p>
-          <p>{movie.budget}</p>
-          <p>{movie.revenue}</p>
+  componentDidMount() {
+    fetchData(`movies/${this.props.movieID}`)
+      .then(movie => this.setState({ singleMovie: new MovieInfo(movie.movie)}))
+      .catch(error => this.setState({ error: error}))
+  }
+
+  render() {
+    return (
+      <>
+      {this.state.singleMovie !== null && 
+      <div className="single-movie-container"
+      style={{ backgroundImage: `url(${this.state.singleMovie.background}), url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-black-solid-color-background.jpg)` }}>
+        <div className="movie-information">
+          <div className="left-side">
+            <h2>{this.state.singleMovietitle}</h2>
+            <img className= "movie-info-poster" src={this.state.singleMovie.poster} alt="movie poster"></img>
+            <Link to={'/'} className='back-btn'>GO BACK</Link>
+          </div>
+          <div className="right-side">
+            <h4 className="movie-overview">{this.state.singleMovie.overview}</h4>
+            <h5>{this.state.singleMovie.tagline}</h5>
+            <p>{this.state.singleMovie.releaseDate}</p>
+            <p>{this.state.singleMovie.genres}</p>
+            <p>{this.state.singleMovie.runTime}</p>
+            <p>{this.state.singleMovie.rating}</p>
+            <p>{this.state.singleMovie.budget}</p>
+            <p>{this.state.singleMovie.revenue}</p>
+          </div>
         </div>
       </div>
-    </div>
-  )
+      }
+      </>
+    ) 
+  }
 }
 
 export default SingleMovie
