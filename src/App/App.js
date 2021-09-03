@@ -25,15 +25,15 @@ class App extends Component {
         <h1>🍅 🤢 Rancid Tomatillos 🎥</h1>
 
         {this.state.error && <h2>Sorry...Server Error 🤷‍♂️</h2>}
-        
+
         {this.state.movies &&
-          <Route exact path="/" render={() => 
-            <Movies movies={this.state.movies}/>} 
+          <Route exact path="/" render={() =>
+            <Movies movies={this.state.movies}/>}
           />}
 
           <Route exact path="/:id" render={({ match }) => {
             return <SingleMovie movieID={parseInt(match.params.id)}/>} } />
-          
+
 
         <div className="footer">
           <h4>Turing School of Software Design - Module 3 Paired Project. All rights not reserved 2021</h4>

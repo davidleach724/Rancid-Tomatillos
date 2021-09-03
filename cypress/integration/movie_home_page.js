@@ -8,10 +8,6 @@ describe('User movie flows', () => {
         cy.get('h1').contains('🍅 🤢 Rancid Tomatillos 🎥')
     })
 
-    it('Should show an error message if server does not respond', () => {
-     cy.get('h2').contains('Sorry...Server Error 🤷‍♂️')
-    })
-
     it('Should be able to display movie cards on load', () => {
         cy.get('img').should('be.visible')
     })
