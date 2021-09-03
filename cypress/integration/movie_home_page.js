@@ -18,7 +18,6 @@ describe('User movie flows', () => {
 
     it('Should be able to click on movie card and page updates URL and display details', () => {
       cy.get('[alt="Money Plane poster"]').click()
-
       cy.url().should('not.eq', 'http://localhost:3000/')
     })
   })

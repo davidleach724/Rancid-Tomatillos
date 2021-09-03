@@ -17,4 +17,11 @@ describe('Single Movie view flow', () => {
     .should('have.class', 'single-movie-container')
     .contains('GO BACK')
   })
+
+  it('Should be able to click on GO BACK and take them back to the home screen', () => {
+    cy.get('div')
+    .should('have.class', 'single-movie-container')
+    .contains('GO BACK').click()
+    cy.url().should('not.eq', 'http://localhost:3000/694919')
+  })
 })
