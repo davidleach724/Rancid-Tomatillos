@@ -18,6 +18,11 @@ describe('Single Movie view flow', () => {
     .contains('GO BACK')
   })
 
+  it('Should display an error message when an invalid card id is in the url', () => {
+    cy.visit('http://localhost:3000/581')
+    cy.get('h2').contains('Sorry...Server Error 🤷‍♂️')
+  })
+
   it('Should be able to click on GO BACK and take them back to the home screen', () => {
     cy.get('div')
     .should('have.class', 'single-movie-container')
