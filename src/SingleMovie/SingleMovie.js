@@ -21,6 +21,7 @@ class SingleMovie extends Component {
   render() {
     return (
       <>
+      {this.state.error && <h2 className="error">{'Sorry...Server Error 🤷‍♂️'} </h2>}
       {this.state.singleMovie !== null && 
       <div className="single-movie-container"
       style={{ backgroundImage: `url(${this.state.singleMovie.background}), url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-black-solid-color-background.jpg)` }}>
