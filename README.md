@@ -21,6 +21,10 @@ Rancid Tomatillos is a website that allows a user to select a movie poster and t
 
 ## Installation Set Up
 
+- Clone the [Repo](https://github.com/davidleach724/Rancid-Tomatillos) to your local machine
+- cd into the repo from your terminal
+- Run npm install
+- Run npm start to deploy the application on your local machine
 
 ## See it in Action
 
@@ -33,18 +37,19 @@ TO BE ADDED
 
 ## Wins
 
-- 
--
+- Learning how to install/open/use Cypress for testing.
+- Creating a React application from scratch and utilizing conditional component based rendering.
 
 ## Challenges
 
-- Understanding the fundamentals of building a React based application
+- Understanding the fundamentals of building a React based application.
 - Understanding how to use Cypress to test components.
 - Understanding how to implement Router to make the site multipage.
 
 ## Future Add Ons
 
-
+- Error handling testing
+- Add a search bar for users to search for a specific movie.
 
 ## Project Managers
 
