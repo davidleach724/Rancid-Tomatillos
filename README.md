@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Rancid Tomatillos - Mod 3 Paired Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Rancid Tomatillos is a website that allows a user to select a movie poster and then see that particular movie's details. The user can then return to the main movie page via the "Go back" link or the back arrow to select a different movie to read about in detail.
 
-In the project directory, you can run:
+### View deployed link here  
 
-### `npm start`
+## Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
+- React Router
+- Cypress
+- JavaScript
+- CSS
+- HTML
+- Day.js
+- Miro
+- GitHub Project Board
+- GitHub Pages Deployment
+- Heroku
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation Set Up
 
-### `npm test`
+- Clone the [Repo](https://github.com/davidleach724/Rancid-Tomatillos) to your local machine
+- cd into the repo from your terminal
+- Run npm install
+- Run npm start to deploy the application on your local machine
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## See it in Action
 
-### `npm run build`
+TO BE ADDED
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributors
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Dave Leach](https://github.com/davidleach724)
+- [Samantha Brown](https://github.com/Samantha-Brown)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Wins
 
-### `npm run eject`
+- Learning how to install/open/use Cypress for testing.
+- Creating a React application from scratch and utilizing conditional component based rendering.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Challenges
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Understanding the fundamentals of building a React based application.
+- Understanding how to use Cypress to test components.
+- Understanding how to implement Router to make the site multipage.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Future Add Ons
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Error handling testing
+- Add a search bar for users to search for a specific movie.
 
-## Learn More
+## Project Managers
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Kayla Gordon](https://github.com/kaylagordon)
+- [Scott Ertmer](https://github.com/sertmer)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Project Spec
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
