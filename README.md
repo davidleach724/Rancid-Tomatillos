@@ -32,4 +32,6 @@ TO BE ADDED
 
 ## Project Spec
 
+- The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
+
 ## Wins/Challenges
