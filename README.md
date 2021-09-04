@@ -22,6 +22,14 @@ Rancid Tomatillos is a website that allows a user to select a movie poster and t
 
 
 ## See it in Action
+
+TO BE ADDED
+
 ## Contributors
-Project Spec
-Wins/Challenges
+
+- Dave Leech
+- Samantha Brown
+
+## Project Spec
+
+## Wins/Challenges
