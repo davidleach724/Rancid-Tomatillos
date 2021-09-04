@@ -7,9 +7,21 @@ Rancid Tomatillos is a website that allows a user to select a movie poster and t
 
 ## Technologies
 
+- React
+- React Router
+- Cypress
+- JavaScript
+- CSS
+- HTML
+- Day.js
+- Miro
+- GitHub Project Board
+- GitHub Pages Deployment
 
-See it in Action
-Installation Set Up
-Contributors
+## Installation Set Up
+
+
+## See it in Action
+## Contributors
 Project Spec
 Wins/Challenges
