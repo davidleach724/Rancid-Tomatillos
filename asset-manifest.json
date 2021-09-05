@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Rancid-Tomatillos/static/css/main.d4dfe7c4.chunk.css",
+    "main.js": "/Rancid-Tomatillos/static/js/main.0658ef6a.chunk.js",
+    "main.js.map": "/Rancid-Tomatillos/static/js/main.0658ef6a.chunk.js.map",
+    "runtime-main.js": "/Rancid-Tomatillos/static/js/runtime-main.b4d6b6a2.js",
+    "runtime-main.js.map": "/Rancid-Tomatillos/static/js/runtime-main.b4d6b6a2.js.map",
+    "static/js/2.594433d5.chunk.js": "/Rancid-Tomatillos/static/js/2.594433d5.chunk.js",
+    "static/js/2.594433d5.chunk.js.map": "/Rancid-Tomatillos/static/js/2.594433d5.chunk.js.map",
+    "index.html": "/Rancid-Tomatillos/index.html",
+    "static/css/main.d4dfe7c4.chunk.css.map": "/Rancid-Tomatillos/static/css/main.d4dfe7c4.chunk.css.map",
+    "static/js/2.594433d5.chunk.js.LICENSE.txt": "/Rancid-Tomatillos/static/js/2.594433d5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b4d6b6a2.js",
+    "static/js/2.594433d5.chunk.js",
+    "static/css/main.d4dfe7c4.chunk.css",
+    "static/js/main.0658ef6a.chunk.js"
+  ]
+}
