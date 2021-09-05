@@ -27,11 +27,11 @@ class App extends Component {
         {this.state.error && <h2>Sorry...Server Error 🤷‍♂️</h2>}
 
         {this.state.movies &&
-          <Route exact path="/" render={() =>
+          <Route exact path="/Rancid-Tomatillos/" render={() =>
             <Movies movies={this.state.movies}/>}
           />}
 
-          <Route exact path="/:id" render={({ match }) => {
+          <Route exact path="/Rancid-Tomatillos/:id" render={({ match }) => {
             return <SingleMovie movieID={parseInt(match.params.id)}/>} } />
 
 

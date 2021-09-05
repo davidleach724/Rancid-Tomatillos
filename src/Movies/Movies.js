@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Movies = ({ movies }) => {
   const movieCards = movies.movies.map(movie => {
     return (
-      <Link to={`/${movie.id}`} key={movie.id}>
+      <Link to={`/Rancid-Tomatillos/${movie.id}`} key={movie.id}>
         <Card
           moviePoster={movie.poster_path}
           movieRating={parseFloat(movie.average_rating).toFixed(2)}
