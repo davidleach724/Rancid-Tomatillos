@@ -29,7 +29,7 @@ class SingleMovie extends Component {
           <div className="left-side">
             <h2>{this.state.singleMovietitle}</h2>
             <img className= "movie-info-poster" src={this.state.singleMovie.poster} alt="movie poster"></img>
-            <Link to={'/Rancid-Tomatillos/'} className='back-btn'>GO BACK</Link>
+            <Link to={'/Rancid-Tomatillos/'} style={{ textDecoration: 'none' }}className='back-btn'>GO BACK</Link>
           </div>
           <div className="right-side">
             <h4 className="movie-overview">{this.state.singleMovie.overview}</h4>
