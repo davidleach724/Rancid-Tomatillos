@@ -18,7 +18,7 @@ describe('Single Movie view flow', () => {
   })
 
   it('Should be able to click on GO BACK and take them back to the home screen', () => {
-    cy.visit('http://localhost:3000/581392')
+    cy.visit('http://localhost:3000/Rancid-Tomatillos/581392')
     cy.get('div')
     .should('have.class', 'single-movie-container')
     .contains('GO BACK').click()
