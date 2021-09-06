@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   background-color: white;
-  opacity: .85;
+  opacity: .9;
   height: 60vh;
   width: 100vw;
 }
@@ -37,6 +37,16 @@ h2 {
   height: auto;
 }
 
+.back-btn {
+  color: black;
+  font-size: 1.5em;
+
+  border: 2px solid black;
+  padding: 3px;
+  background-color: rgb(191, 191, 191);
+  border-radius: 5px;
+}
+
 p {
   margin: 10px;
 }
@@ -53,9 +63,3 @@ p {
   align-items: center;
   text-align: center;
 }
-
-/* .black-overlay {
-  background-color: black;
-  height: 80vh;
-  opacity: .75;
-} */

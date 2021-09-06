@@ -8,7 +8,6 @@ const Card = ({moviePoster, movieRating, movieTitle }) => {
       </div>
       <div className="bottom-card">
         <h2 className="poster-text">{movieTitle}</h2>
-        <h3 className="poster-text">Rating: {movieRating}</h3>
       </div>
     </div>
   )
