@@ -36,7 +36,7 @@ class App extends Component {
 
 
         <div className="footer">
-          <h4>Turing School of Software Design - Module 3 Paired Project. All rights not reserved 2021</h4>
+          <h3>Turing School of Software Design - Module 3 Paired Project. All rights not reserved 2021</h3>
         </div>
       </main>
     )
