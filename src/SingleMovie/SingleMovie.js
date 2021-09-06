@@ -22,7 +22,7 @@ class SingleMovie extends Component {
     return (
       <>
       {this.state.error && <h2 className="error">{'Sorry...Server Error 🤷‍♂️'} </h2>}
-      {this.state.singleMovie !== null && 
+      {this.state.singleMovie !== null &&
       <div className="single-movie-container"
       style={{ backgroundImage: `url(${this.state.singleMovie.background}), url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-black-solid-color-background.jpg)` }}>
         <div className="movie-information">
@@ -32,8 +32,8 @@ class SingleMovie extends Component {
             <Link to={'/Rancid-Tomatillos/'} style={{ textDecoration: 'none' }}className='back-btn'>GO BACK</Link>
           </div>
           <div className="right-side">
-            <h4 className="movie-overview">{this.state.singleMovie.overview}</h4>
-            <h5>{this.state.singleMovie.tagline}</h5>
+            <h3 className="movie-overview">{this.state.singleMovie.overview}</h3>
+            <h4>{this.state.singleMovie.tagline}</h4>
             <p>{this.state.singleMovie.releaseDate}</p>
             <p>{this.state.singleMovie.genres}</p>
             <p>{this.state.singleMovie.runTime}</p>
@@ -45,7 +45,7 @@ class SingleMovie extends Component {
       </div>
       }
       </>
-    ) 
+    )
   }
 }
 
